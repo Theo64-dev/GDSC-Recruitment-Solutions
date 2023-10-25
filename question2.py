@@ -1,3 +1,12 @@
+"""Question 2: Given an array nums of n integers, return an array of all the unique quadruplets [nums[a], nums[b], nums[c], nums[d]] such that:
+
+0 <= a, b, c, d < n
+a, b, c, and d are distinct.
+nums[a] + nums[b] + nums[c] + nums[d] == target
+You may return the answer in any order."""
+
+# Solution :
+
 def check_sum(nums, target):
     nums.sort()
 
@@ -22,8 +31,12 @@ def check_sum(nums, target):
 
     return list(quadruplets)
 
-# Example usage
-nums = [1, 0, -1, 0, -2, 2]
-target = 0
-result = check_sum(nums, target)
-print(result)
+# Example 1:
+nums1 = [1, 0, -1, 0, -2, 2]
+target1 = 0
+print("Example 1: "+ str(check_sum(nums1, target1)))
+
+#Example 2 :
+nums2 = [2, 2, 2, 2, 2]
+target2 = 8
+print("Example 2: "+ str(check_sum(nums2,target2)))
